@@ -1,0 +1,79 @@
+;Sliced at: Tue 07-08-2018 15:55:41
+;Basic settings: Layer height: 0.5 Walls: 6 Fill: 100
+;Print time: 5 minutes
+;Filament used: 0.702m 1.0g
+;Filament cost: None
+;M190 S0 ;Uncomment to add your own bed temperature line
+;M109 S0 ;Uncomment to add your own temperature line
+G21        ;metric values
+G90        ;absolute positioning
+M82        ;set extruder to absolute mode
+M107       ;start with the fan off
+G28 Z0     ;move Z to min endstops
+M18 E0
+G1 Z15.0 F1200 ;move the platform down 15mm
+;G92 E0                  ;zero the extruded length
+;G1 F200 E3              ;extrude 3mm of feed stock
+;G92 E0                  ;zero the extruded length again
+G1 F1200
+;Put printing message on LCD screen
+M117 Printing...
+
+;Layer count: 6
+;LAYER:0
+M107
+M400 
+M104 S0 
+G0 F1200 X25.350 Y52.335 Z2.500000 
+M400 
+M104 S40 
+G4 P100 
+;TYPE:SKIRT
+G1 X47.382 Y52.335 E2.91197
+G1 X47.736 Y52.469 E2.96197 
+G1 X48.090 Y52.603 E3.01197 
+G1 X48.443 Y52.737 E3.06197 
+G1 X48.797 Y52.871 E3.11197 
+G1 X49.151 Y53.005 E3.16197 
+G1 X49.505 Y53.139 E3.21197 
+G1 X49.858 Y53.273 E3.26197 
+G1 X50.212 Y53.407 E3.31197 
+G1 X50.566 Y53.541 E3.36197 
+G1 X50.920 Y53.675 E3.41197 
+G1 X51.273 Y53.809 E3.46197 
+G1 X51.627 Y53.943 E3.51197 
+G1 X51.981 Y54.077 E3.56197 
+G1 X52.335 Y54.211 E3.61197 
+G1 X52.688 Y54.345 E3.66197 
+G1 X53.042 Y54.479 E3.71197 
+G1 X53.396 Y54.613 E3.76197 
+G1 X53.750 Y54.747 E3.81197 
+G1 X54.010 Y54.846 E3.84876
+G1 X54.371 Y54.958 E3.89876 
+G1 X54.733 Y55.071 E3.94876 
+G1 X55.094 Y55.183 E3.99876 
+G1 X55.216 Y55.221 E4.01568
+G1 X55.588 Y55.289 E4.06568 
+G1 X55.960 Y55.357 E4.11568 
+G1 X56.332 Y55.425 E4.16568 
+G1 X56.382 Y55.434 E4.17234
+G1 X56.760 Y55.456 E4.22234 
+G1 X57.137 Y55.479 E4.27234 
+G1 X57.515 Y55.501 E4.32234 
+G1 X57.531 Y55.502 E4.32447
+G1 X57.909 Y55.503 E4.37447 
+G1 X58.288 Y55.503 E4.42447 
+G1 X58.666 Y55.504 E4.47447 
+G1 X59.044 Y55.505 E4.52447 
+G0 X73.273 Y60.000 Z3.000000
+
+
+;End GCode
+M104 S0                     ;extruder heater off
+M140 S0                     ;heated bed heater off (if you have it)
+G91                                    ;relative positioning
+;G1 E-1 F300                            ;retract the filament a bit before lifting the nozzle, to release some of the pressure
+;G1 Z+0.5 E-5 X-20 Y-20 F1200 ;move Z up a bit and retract filament even more
+G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
+M84                         ;steppers off
+G90                         ;absolute positioning

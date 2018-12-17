@@ -39,6 +39,21 @@ def fan_toggle(output_file, line):
     return;
 
 
+
+def fan_on(output_file):
+    output_file.write('M400 ; wait\n')
+    output_file.write('M106 ; turn fan on \n')
+    return;
+    
+    
+    
+def fan_off(output_file):
+    output_file.write('M400 ; wait\n')
+    output_file.write('M106 ; turn fan off \n')
+    return;
+
+
+
 def parse_line(passline):
     if(' F' in passline):
         # We don't care about feedrate, but we want to get rid of this first:
@@ -49,51 +64,45 @@ def parse_line(passline):
         Z_ = float(passline[passline.rfind('Z')+1:])
         passline = passline[:passline.rfind('Z')].strip()
     else:
-        Z_ = 0
+        Z_ = None
         
     if(' E' in passline):
         # Take the number for E1 and remove that from the 'line' string:
         E_ = float(passline[passline.rfind('E')+1:])
         passline = passline[:passline.rfind('E')].strip()
     else: 
-        E_ = 0
+        E_ = None
         
     if(' Y' in passline):
         # Take the number for Y1 and remove that from the 'line' string:
         Y_ = float(passline[passline.rfind('Y')+1:])
         passline = passline[:passline.rfind('Y')].strip()
     else:
-        Y_ = 0
+        Y_ = None
             
         # Whatever is left should be X to the end:
     if(' X' in passline):
         X_ = float(passline[passline.rfind('X')+1:])
     else:
-        X_ = 0
+        X_ = None
     
-    dist = pow(pow(X_, 2) + pow(Y_, 2) + pow(Z_, 2), 0.5)
-    return([X_, Y_, Z_, E_, dist])
+    
+    return([X_, Y_, Z_, E_]);
         
     
-def line_divider(split_dist, curr_data, prev_data, output_file, times, Etot, isabs):
+def line_divider(split_dist, curr_data, prev_data, output_file, times):
     (num_intervals, remainder) = divmod(curr_data[4], split_dist)
     deltaX = curr_data[0] - prev_data[0]
     deltaY = curr_data[1] - prev_data[1]
-    deltaE = curr_data[3] - prev_data[3]
     
     for i in range(0, int(num_intervals)):
         x_sub = prev_data[0] + ((i * deltaX) / num_intervals)
         y_sub = prev_data[1] + ((i * deltaY) / num_intervals)
-        if(isabs):
-            Etot = prev_data[3] #FIXME
-            E_sub = prev_data[3] + ((i * deltaE) / num_intervals)
-        else:
-            E_sub = prev_data[3] + ((i * deltaE) / num_intervals)
             
         # dist_sub = pow(pow(x_sub, 2) + pow(y_sub, 2), 0.5)
         if(i is not (num_intervals)):
             # output the move:
-            output_file.write("G1 X%f Y%f E%f\n" %(x_sub, y_sub, E_sub))
+            output_file.write("G1 X%f Y%f\n" %(x_sub, y_sub))
             # FIXME : 
             cool_down(times[0], times[1], times[2], times[3], output_file)
             
@@ -101,3 +110,70 @@ def line_divider(split_dist, curr_data, prev_data, output_file, times, Etot, isa
             output_file.write("G1 X%f Y%f E%f\n" %(curr_data[0], curr_data[1], curr_data[3]))
         
     return remainder;
+
+
+
+
+def line_dividerV2(dist, split_dist, curr_data, prev_data, output_file, times):
+    (num_intervals, remainder) = divmod(dist, split_dist)
+    deltaX = curr_data[0] - prev_data[0]
+    deltaY = curr_data[1] - prev_data[1]
+    
+    for i in range(0, int(num_intervals)):
+        x_sub = prev_data[0] + ((i * deltaX) / num_intervals)
+        y_sub = prev_data[1] + ((i * deltaY) / num_intervals)
+            
+        # dist_sub = pow(pow(x_sub, 2) + pow(y_sub, 2), 0.5)
+        if(i is not (num_intervals)):
+            # output the move:
+            output_file.write("G1 X%f Y%f\n" %(x_sub, y_sub))
+            cool_down(times[0], times[1], times[2], times[3], output_file)
+            
+        else: # last one, so let's move to the final position and 
+            output_file.write("G1 X%f Y%f \n" %(curr_data[0], curr_data[1]))
+        
+    return([curr_data[0], curr_data[1], remainder]);
+
+
+
+
+
+
+
+
+def create_line(element):
+    # FIXME: Can be more advanced.   
+    if(element[2] is None):
+        line = "G1 X" + str(element[0]) + " Y" + str(element[1]) + " \n"
+    elif(element[0] is None and element[1] is None):
+        line = "G1 " + " Z" + str(element[2]) + " \n"
+    else:
+        line = "G1 X" + str(element[0]) + " Y" + str(element[1]) + " Z" + str(element[2]) + " \n"
+
+    
+    return line;
+
+
+
+def calc_dist(data, prev_data):
+    num_data = [0]*len(data)
+    prev_num_data = [0]*len(prev_data)
+    # First, replace None characters with 0:
+    for element in data:
+        if(element is None):
+            num_data[data.index(element)] = 0
+        
+        else:
+            num_data[data.index(element)] = data[data.index(element)]
+    for element in prev_data:
+        if(element is None):
+            prev_num_data[prev_data.index(element)] = 0
+        else:
+            prev_num_data[prev_data.index(element)] = prev_data[prev_data.index(element)]
+    # Find Difference:
+    X_ = num_data[0] - prev_num_data[0]
+    Y_ = num_data[1] - prev_num_data[1]
+    Z_ = num_data[2] - prev_num_data[2]   
+    # Calc the distance:
+    dist = pow(pow(X_, 2) + pow(Y_, 2) + pow(Z_, 2), 0.5)
+    return dist;

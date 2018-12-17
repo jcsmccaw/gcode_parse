@@ -49,7 +49,7 @@ def fan_on(output_file):
     
 def fan_off(output_file):
     output_file.write('M400 ; wait\n')
-    output_file.write('M106 ; turn fan off \n')
+    output_file.write('M107 ; turn fan off \n')
     return;
 
 

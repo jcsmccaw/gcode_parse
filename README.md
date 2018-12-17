@@ -1,2 +1,12 @@
 # gcode_parse
 Parsing GCode into shorter line segments, for modified 3D Printing. 
+
+# Current Stable Code:
+
+'absolute_gcode_parser_V2.py' is the latest stable code. This file must be run with the header file, footer file, and 'gcode_parsing_functions.py' in the same directory. 'header.txt' and 'footer.txt' are provided as examples, and are written for the monoprice mini example gcode titled 'MP_T5_01.gcode'. 
+
+There is not a current stable code for relative gcode parsing, though current attempts are:
+gcode_parser.py
+improved_gcode_parser.py
+
+This code outputs a parsed gcode file that can be directly printed on the monoprice mini, controlling the voltage to the fan (5V, on/off) as a 'print' signal. 

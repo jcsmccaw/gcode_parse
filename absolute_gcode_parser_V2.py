@@ -103,6 +103,8 @@ with open(output, 'w') as parsed:
                         print('short\n')
                         out_line = create_line(element)
                         output_line(parsed, out_line)
+                else: # E is None
+                    fan_off(parsed)
                         
         elif(element[2] is not None): # We have a Z motion
             out_line = create_line(element)

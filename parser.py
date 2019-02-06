@@ -9,7 +9,6 @@ Created on Sun Dec 16 20:12:58 2018
 Intended for use with Simplify3D GCode files, sliced for the monoprice pro mini
 3D Printer.
 Written by JC McCaw
-Test for mom and dad
 Last Updated 2/4/2019"""
 
 

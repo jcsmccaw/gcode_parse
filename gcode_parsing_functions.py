@@ -90,31 +90,10 @@ def parse_line(passline):
     return([X_, Y_, Z_, E_]);
 
 
-def line_divider(split_dist, curr_data, prev_data, output_file, times):
-    (num_intervals, remainder) = divmod(curr_data[4], split_dist)
-    deltaX = curr_data[0] - prev_data[0]
-    deltaY = curr_data[1] - prev_data[1]
-
-    for i in range(0, int(num_intervals)):
-        x_sub = prev_data[0] + ((i * deltaX) / num_intervals)
-        y_sub = prev_data[1] + ((i * deltaY) / num_intervals)
-
-        # dist_sub = pow(pow(x_sub, 2) + pow(y_sub, 2), 0.5)
-        if(i is not (num_intervals)):
-            # output the move:
-            output_file.write("G1 X%f Y%f\n" %(x_sub, y_sub))
-            # FIXME :
-            cool_down(times[0], times[1], times[2], times[3], output_file)
-
-        else: # last one, so let's move to the final position and
-            output_file.write("G1 X%f Y%f E%f\n" %(curr_data[0], curr_data[1], curr_data[3]))
-
-    return remainder;
 
 
 
-
-def line_dividerV2(dist, split_dist, curr_data, prev_data, output_file, times):
+def line_divider(dist, split_dist, curr_data, prev_data, output_file, times):
     (num_intervals, remainder) = divmod(dist, split_dist)
     deltaX = curr_data[0] - prev_data[0]
     deltaY = curr_data[1] - prev_data[1]
@@ -177,6 +156,6 @@ def calc_dist(data, prev_data):
 def step_data_block(filename, data_block):
     # assign n of data block as n - 1, adding a new position.
     # If EoF, need to apply n + xth position as NULL.
-    # Overall, maybe 10 before and 10 behind each line will be safe buffer. 
+    # Overall, maybe 10 before and 10 behind each line will be safe buffer.
 
     return -1;

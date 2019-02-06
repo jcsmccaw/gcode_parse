@@ -16,6 +16,7 @@ Last Updated 2/4/2019"""
 import math
 from gcode_parsing_functions import *
 import sys
+import numpy as np
 
 # Initialization variables and user input:
 
@@ -54,7 +55,7 @@ def parse():
     curr_y = 0
     delta_dist = 0 # distance, in mm, that has been printed since the last cool-down period.
     Etot = 0
-    data = []
+    data = np.zeros((11,4))
 
     # logic holders
     firstline = 1
@@ -66,77 +67,94 @@ def parse():
     footer = 'footer.txt'
 
 
-    with open(parse_file, 'r') as gcode:
-        lines = gcode.readlines()
-        # FIXME: footer and header files get parsed here.
+
     with open(footer, 'r') as footfile:
         footerlines = footfile.readlines()
 
     with open(header, 'r') as headfile:
         headerlines = headfile.readlines()
 
-    with open(output, 'w') as parsed:
-        for line in headerlines:
-            output_line(parsed, line)
 
-        for line in lines:
-            if line.startswith('; layer 1'):
-                go = 1
-            if(line.startswith('G1 ') and (go is 1)):
-                data.append(parse_line(line))
-        print(data)
-        for element in data:
-            if((element[0] is not None) and (element[1] is not None)): # XY motion (simplify3D has redundant
-                # positioning information in absolute slicing, so any proper XY motion has both)
-                if(firstline is 1):
-                    curr_x = element[0]
-                    curr_y = element[1]
-                    firstline = 0
-                else:
-                    if(element[3] is not None): # We have a printing motion, thus the fan signal is controlled
-                        dist = pow(pow(element[0] - curr_x, 2) + pow(element[1] - curr_y, 2), 0.5)
-                        print(dist)
-                        delta_dist = delta_dist + dist
-                        if(dist > parse_len):
-                            print('long trace\n')
-                            if(element is not data[-1]):
-                                prev_x = data[data.index(element) - 1][0]
-                                prev_y = data[data.index(element) - 1][1]
-                                while(prev_x is None):
-                                    prev_x = data[data.index(element) - i][0]
-                                    i = i + 1
-                                i = 1
-                                while(prev_y is None):
-                                    prev_y = data[data.index(element) - i][1]
-                                    i = i + 1
+    with open(parse_file, 'r') as gcode:
+        with open(output, 'w') as parsed:
+            for line in headerlines:
+                output_line(parsed, line)
+            # Set up data structure:
+            # The first 5 are null elements, because element 5 (the 6th) is the
+            # 'current' element.
+            data_block = []
+            for i = range(0, 5): # Make a block of 11 lines from the file (5
+            # before, 5 after the 'current' block)
+                data_block.append(None)
+            # Fill in elements 5 through 10 (6th through the 11th) with data from the file:
+            # There's a complimentary numpy array 'data' that better fits my algorithm.
+            for i = range(5, 10):
+                data_block[i] = gcode.readline()
+                data[i,:] = parse_line(data_block[i])
 
-                            div_out = line_dividerV2(dist, parse_len, [element[0], element[1]], [prev_x, prev_y], parsed, times)
-                            delta_dist = div_out[2]
-                            curr_x = div_out[0]
-                            curr_y = div_out[1]
-                        elif((delta_dist > parse_len) and not (dist > parse_len)):
-                            print('overhang\n')
-                            cool_down(times[0], times[1], times[2], times[3], parsed)
-                            delta_dist = delta_dist - parse_len
-                            out_line = create_line(element)
-                            output_line(parsed, out_line)
+            while data_block[5] is not None:
+
+                if data_block[5].startswith('; layer 1'):
+                    go = 1
+                if(data_block[5].startswith('G1 ') and (go is 1)):
+                    data[5,:] = (parse_line(data_block[5]))
+                print(data)
+                for element in data:
+                    if((element[0] is not None) and (element[1] is not None)): # XY motion (simplify3D has redundant
+                        # positioning information in absolute slicing, so any proper XY motion has both)
+                        if(firstline is 1):
+                            curr_x = element[0]
+                            curr_y = element[1]
+                            firstline = 0
                         else:
-                            print('short\n')
-                            out_line = create_line(element)
-                            output_line(parsed, out_line)
-                    else: # E is None
-                        fan_off(parsed)
+                            if(element[3] is not None): # We have a printing motion, thus the fan signal is controlled
+                                dist = pow(pow(element[0] - curr_x, 2) + pow(element[1] - curr_y, 2), 0.5)
+                                print(dist)
+                                delta_dist = delta_dist + dist
+                                if(dist > parse_len):
+                                    print('long trace\n')
+                                    # Check to see if we can define prev_x and prev_y:
+                                    if(element is not data[-1]):
+                                        # FIXME: I need to fix the calls to data to refer to the 'data_block'
+                                        prev_x = data[data.index(element) - 1][0]
+                                        prev_y = data[data.index(element) - 1][1]
+                                        while(prev_x is None):
+                                            prev_x = data[data.index(element) - i][0]
+                                            i = i + 1
+                                        i = 1
+                                        while(prev_y is None):
+                                            prev_y = data[data.index(element) - i][1]
+                                            i = i + 1
 
-            elif(element[2] is not None): # We have a Z motion
-                out_line = create_line(element)
-                output_line(parsed, out_line)
+                                    div_out = line_divider(dist, parse_len, [element[0], element[1]], [prev_x, prev_y], parsed, times)
+                                    delta_dist = div_out[2]
+                                    curr_x = div_out[0]
+                                    curr_y = div_out[1]
+                                elif((delta_dist > parse_len) and not (dist > parse_len)):
+                                    print('overhang\n')
+                                    cool_down(times[0], times[1], times[2], times[3], parsed)
+                                    delta_dist = delta_dist - parse_len
+                                    out_line = create_line(element)
+                                    output_line(parsed, out_line)
+                                else:
+                                    print('short\n')
+                                    out_line = create_line(element)
+                                    output_line(parsed, out_line)
+                            else: # E is None
+                                fan_off(parsed)
+
+                    elif(element[2] is not None): # We have a Z motion
+                        out_line = create_line(element)
+                        output_line(parsed, out_line)
 
 
-        else:
-            output_line(parsed, line)
+                else:
+                    output_line(parsed, line)
 
-        for line in footerlines:
-            output_line(parsed, line)
+                # FIXME: step through data and data_block, getting one more line from the gcode file. 
+
+            for line in footerlines:
+                output_line(parsed, line)
 
 
 

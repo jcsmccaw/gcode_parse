@@ -7,7 +7,8 @@ G1 Z0.2 F1200 ; raise nozzle
 M106 ; fan on to start flow
 G1 X85 Y0 F600 ; extrude a bit across the front
 M107 ; stop flow
-G1 Z0.200 F300 ; set our feedrate for the print jobG1 X26.414 Y50.335 
+G1 Z0.200 F300 ; set our feedrate for the print job
+G1 X26.414 Y50.335 
 G1 X26.414000 Y50.335000
 
 
@@ -1287,6 +1288,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X26.533 Y50.935 
 G1 X26.533000 Y50.935000
 
@@ -2485,6 +2488,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X26.423 Y50.981 
 M400 ; wait
 M107 ; turn fan off 
 G1 X29.030000 Y56.400000
@@ -5322,6 +5326,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X66.437000 Y58.560000
 
 
@@ -6067,6 +6073,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X68.473000 Y62.160000
 
 
@@ -6487,8 +6495,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X90.97 Y63.6 
 G1  Z0.4 
-G1 X90.970000 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -6502,7 +6511,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X88.892889 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -6516,7 +6525,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X86.815778 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -6530,7 +6539,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X84.738667 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -6544,7 +6553,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X82.661556 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -6558,7 +6567,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X80.584444 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -6572,7 +6581,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X78.507333 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -6586,7 +6595,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X76.430222 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -6600,7 +6609,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X74.353111 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -6923,6 +6932,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X66.437000 Y58.560000
@@ -7515,6 +7526,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X47.724000 Y63.600000
@@ -10517,8 +10530,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X29.03 Y56.4 
 G1  Z0.6 
-G1 X29.030000 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -10532,7 +10546,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X31.107111 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -10546,7 +10560,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X33.184222 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -10560,7 +10574,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X35.261333 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -10574,7 +10588,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X37.338444 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -10588,7 +10602,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X39.415556 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -10602,7 +10616,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X41.492667 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -10616,7 +10630,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X43.569778 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -10630,7 +10644,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X45.646889 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -13339,6 +13353,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X66.437000 Y58.560000
 
 
@@ -14084,6 +14100,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X68.473000 Y62.160000
 
 
@@ -14504,8 +14522,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X90.97 Y63.6 
 G1  Z0.8 
-G1 X90.970000 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -14519,7 +14538,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X88.892889 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -14533,7 +14552,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X86.815778 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -14547,7 +14566,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X84.738667 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -14561,7 +14580,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X82.661556 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -14575,7 +14594,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X80.584444 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -14589,7 +14608,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X78.507333 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -14603,7 +14622,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X76.430222 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -14617,7 +14636,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X74.353111 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -14940,6 +14959,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X66.437000 Y58.560000
@@ -15532,6 +15553,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X47.724000 Y63.600000
@@ -18534,8 +18557,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X29.03 Y56.4 
 G1  Z1.0 
-G1 X29.030000 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -18549,7 +18573,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X31.107111 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -18563,7 +18587,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X33.184222 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -18577,7 +18601,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X35.261333 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -18591,7 +18615,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X37.338444 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -18605,7 +18629,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X39.415556 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -18619,7 +18643,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X41.492667 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -18633,7 +18657,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X43.569778 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -18647,7 +18671,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X45.646889 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -21356,6 +21380,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X66.437000 Y58.560000
 
 
@@ -22101,6 +22127,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X68.473000 Y62.160000
 
 
@@ -22521,8 +22549,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X90.97 Y63.6 
 G1  Z1.2 
-G1 X90.970000 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -22536,7 +22565,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X88.892889 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -22550,7 +22579,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X86.815778 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -22564,7 +22593,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X84.738667 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -22578,7 +22607,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X82.661556 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -22592,7 +22621,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X80.584444 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -22606,7 +22635,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X78.507333 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -22620,7 +22649,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X76.430222 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -22634,7 +22663,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X74.353111 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -22957,6 +22986,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X66.437000 Y58.560000
@@ -23549,6 +23580,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X47.724000 Y63.600000
@@ -26551,8 +26584,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X29.03 Y56.4 
 G1  Z1.4 
-G1 X29.030000 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -26566,7 +26600,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X31.107111 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -26580,7 +26614,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X33.184222 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -26594,7 +26628,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X35.261333 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -26608,7 +26642,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X37.338444 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -26622,7 +26656,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X39.415556 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -26636,7 +26670,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X41.492667 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -26650,7 +26684,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X43.569778 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -26664,7 +26698,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X45.646889 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -29373,6 +29407,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X66.437000 Y58.560000
 
 
@@ -30118,6 +30154,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X68.473000 Y62.160000
 
 
@@ -30538,8 +30576,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X90.97 Y63.6 
 G1  Z1.6 
-G1 X90.970000 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -30553,7 +30592,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X88.892889 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -30567,7 +30606,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X86.815778 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -30581,7 +30620,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X84.738667 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -30595,7 +30634,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X82.661556 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -30609,7 +30648,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X80.584444 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -30623,7 +30662,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X78.507333 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -30637,7 +30676,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X76.430222 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -30651,7 +30690,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X74.353111 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -30974,6 +31013,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X66.437000 Y58.560000
@@ -31566,6 +31607,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X47.724000 Y63.600000
@@ -34568,8 +34611,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X29.03 Y56.4 
 G1  Z1.8 
-G1 X29.030000 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -34583,7 +34627,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X31.107111 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -34597,7 +34641,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X33.184222 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -34611,7 +34655,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X35.261333 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -34625,7 +34669,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X37.338444 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -34639,7 +34683,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X39.415556 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -34653,7 +34697,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X41.492667 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -34667,7 +34711,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X43.569778 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -34681,7 +34725,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X45.646889 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -37390,6 +37434,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X66.437000 Y58.560000
 
 
@@ -38135,6 +38181,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X68.473000 Y62.160000
 
 
@@ -38555,8 +38603,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X90.97 Y63.6 
 G1  Z2.0 
-G1 X90.970000 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -38570,7 +38619,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X88.892889 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -38584,7 +38633,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X86.815778 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -38598,7 +38647,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X84.738667 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -38612,7 +38661,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X82.661556 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -38626,7 +38675,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X80.584444 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -38640,7 +38689,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X78.507333 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -38654,7 +38703,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X76.430222 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -38668,7 +38717,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X74.353111 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -38991,6 +39040,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X66.437000 Y58.560000
@@ -39583,6 +39634,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X47.724000 Y63.600000
@@ -42585,8 +42638,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X29.03 Y56.4 
 G1  Z2.2 
-G1 X29.030000 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -42600,7 +42654,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X31.107111 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -42614,7 +42668,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X33.184222 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -42628,7 +42682,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X35.261333 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -42642,7 +42696,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X37.338444 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -42656,7 +42710,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X39.415556 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -42670,7 +42724,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X41.492667 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -42684,7 +42738,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X43.569778 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -42698,7 +42752,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X45.646889 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -45407,6 +45461,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X66.437000 Y58.560000
 
 
@@ -46152,6 +46208,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X68.473000 Y62.160000
 
 
@@ -46572,8 +46630,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X90.97 Y63.6 
 G1  Z2.4 
-G1 X90.970000 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -46587,7 +46646,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X88.892889 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -46601,7 +46660,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X86.815778 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -46615,7 +46674,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X84.738667 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -46629,7 +46688,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X82.661556 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -46643,7 +46702,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X80.584444 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -46657,7 +46716,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X78.507333 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -46671,7 +46730,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X76.430222 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -46685,7 +46744,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X74.353111 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -47008,6 +47067,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X66.437000 Y58.560000
@@ -47600,6 +47661,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X47.724000 Y63.600000
@@ -50602,8 +50665,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X29.03 Y56.4 
 G1  Z2.6 
-G1 X29.030000 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -50617,7 +50681,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X31.107111 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -50631,7 +50695,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X33.184222 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -50645,7 +50709,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X35.261333 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -50659,7 +50723,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X37.338444 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -50673,7 +50737,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X39.415556 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -50687,7 +50751,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X41.492667 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -50701,7 +50765,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X43.569778 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -50715,7 +50779,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X45.646889 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -53424,6 +53488,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X66.437000 Y58.560000
 
 
@@ -54169,6 +54235,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X68.473000 Y62.160000
 
 
@@ -54589,8 +54657,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X90.97 Y63.6 
 G1  Z2.8 
-G1 X90.970000 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -54604,7 +54673,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X88.892889 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -54618,7 +54687,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X86.815778 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -54632,7 +54701,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X84.738667 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -54646,7 +54715,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X82.661556 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -54660,7 +54729,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X80.584444 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -54674,7 +54743,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X78.507333 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -54688,7 +54757,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X76.430222 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -54702,7 +54771,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X74.353111 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -55025,6 +55094,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X66.437000 Y58.560000
@@ -55617,6 +55688,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X47.724000 Y63.600000
@@ -58619,8 +58692,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X29.03 Y56.4 
 G1  Z3.0 
-G1 X29.030000 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -58634,7 +58708,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X31.107111 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -58648,7 +58722,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X33.184222 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -58662,7 +58736,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X35.261333 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -58676,7 +58750,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X37.338444 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -58690,7 +58764,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X39.415556 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -58704,7 +58778,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X41.492667 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -58718,7 +58792,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X43.569778 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -58732,7 +58806,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X45.646889 Y56.400000
+G1 X47.724000 Y56.400000
 
 
 G91 ; relative positioning
@@ -61441,6 +61515,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X66.437000 Y58.560000
 
 
@@ -62186,6 +62262,8 @@ G90 ; global positioning again
 
 M400 ; wait
 M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 G1 X68.473000 Y62.160000
 
 
@@ -62606,8 +62684,9 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X90.97 Y63.6 
 G1  Z3.2 
-G1 X90.970000 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -62621,7 +62700,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X88.892889 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -62635,7 +62714,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X86.815778 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -62649,7 +62728,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X84.738667 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -62663,7 +62742,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X82.661556 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -62677,7 +62756,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X80.584444 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -62691,7 +62770,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X78.507333 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -62705,7 +62784,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X76.430222 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -62719,7 +62798,7 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
-G1 X74.353111 Y63.600000
+G1 X72.276000 Y63.600000
 
 
 G91 ; relative positioning
@@ -63042,6 +63121,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X66.437000 Y58.560000
@@ -63634,6 +63715,8 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+M400 ; wait
+M107 ; turn fan off 
 M400 ; wait
 M107 ; turn fan off 
 G1 X47.724000 Y63.600000
@@ -66636,9 +66719,23 @@ M106
 G1 Z0.000000 E0.000000
 G90 ; global positioning again
 
+G1 X29.03 Y56.4 
 M400 ; wait
 M107 ; turn fan off 
-;   Material cost: 0.08
+M400 ; wait
+M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
+M400 ; wait
+M107 ; turn fan off 
 ; Ending Gcode:
 M107 ; fan off
 G91 ; relative positioning

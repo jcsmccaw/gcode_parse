@@ -10,6 +10,7 @@ Functions:
 """
 
 import math
+import numpy as np
 
 def cool_down(idle_height, idle_time, restart_height, delE, output_file):
     output_file.write("\n\nG91 ; relative positioning\n") # set relative positioning
@@ -115,14 +116,14 @@ def line_divider(dist, split_dist, curr_data, prev_data, output_file, times):
 
 
 
-def create_line(element):
+def create_line(data):
     # FIXME: Can be more advanced.
-    if(element[2] is None):
-        line = "G1 X" + str(element[0]) + " Y" + str(element[1]) + " \n"
-    elif(element[0] is None and element[1] is None):
-        line = "G1 " + " Z" + str(element[2]) + " \n"
+    if(np.isnan(data[2])):
+        line = "G1 X" + str(data[0]) + " Y" + str(data[1]) + " \n"
+    elif(np.isnan(data[0]) and np.isnan(data[1])):
+        line = "G1 " + " Z" + str(data[2]) + " \n"
     else:
-        line = "G1 X" + str(element[0]) + " Y" + str(element[1]) + " Z" + str(element[2]) + " \n"
+        line = "G1 X" + str(data[0]) + " Y" + str(data[1]) + " Z" + str(data[2]) + " \n"
 
 
     return line;
@@ -134,13 +135,13 @@ def calc_dist(data, prev_data):
     prev_num_data = [0]*len(prev_data)
     # First, replace None characters with 0:
     for element in data:
-        if(element is None):
+        if(np.isnan(element)):
             num_data[data.index(element)] = 0
 
         else:
             num_data[data.index(element)] = data[data.index(element)]
     for element in prev_data:
-        if(element is None):
+        if(np.isnan(element)):
             prev_num_data[prev_data.index(element)] = 0
         else:
             prev_num_data[prev_data.index(element)] = prev_data[prev_data.index(element)]

@@ -8,7 +8,7 @@ Parsing GCode into shorter line segments, for modified 3D Printing. This code ou
 
   - This parses gcode file MP_T5_01.gcode into MP_T5_01_parsed.gcode, using default splitting length of 2mm and wait time of 2 seconds.
 
-  > python parser.py MP_T5_01.gcode 2.9 1000
+  > python parser.py MP_T5_01.gcode 2.5 1000
 
   - This parses gcode file MP_T5_01.gcode into MP_T5_01_parsed.gcode, using splitting length of 2.5mm and wait time of 1 second.
 

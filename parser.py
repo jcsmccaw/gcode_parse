@@ -41,15 +41,9 @@ def parse():
     output_a = parse_file.split('.')
     output = output_a[0] + '_parsed.gcode'
 
-
-#    split_dist = input('Input the distance, in millimeters, that you want printed between each cool-down period: \n\t\t')
-#    idle_height = input('Enter the height, in millimeters, that the printer should move above the print body for idling:\n\t\t') # mm above part that the printhead idles at
-#    restart_height =input('Enter the height, in millimeters, that the printer should re-initiate printing after idling\n(NOTE this must be less than the idle height):\n\t\t') # mm before part that the ultrasound should turn on to begin flow
-#    idle_time = input('Enter the time, in milliseconds, per idle:\n\t\t') # time in milliseconds per cool-down period
-    delE = 0
     idle_height = 0
     restart_height = 0
-    times = [idle_height, parse_delay, restart_height, delE]
+    times = [idle_height, parse_delay, restart_height, 0]
     curr_data = [0, 0, 0, 0, 0]
     curr_x = 0
     curr_y = 0
@@ -171,8 +165,6 @@ def parse():
 
             for line in footerlines:
                 output_line(parsed, line)
-
-
-
+                
 if __name__ == "__main__":
     parse()

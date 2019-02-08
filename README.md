@@ -14,7 +14,7 @@ Parsing GCode into shorter line segments, for modified 3D Printing. This code ou
 
 # Stable Unit Tests:
 as of 1/8/19 the following unit tests demonstrated the functionality of the code:
-'mug-test.gcode' -- a mug that offers more complex and larger geometry to test
-'car_test.gcode' -- a complex car with many triangulation and mesh errors, to test corrupt stls going through (not recommended, because while it does work it takes over an hour)
-'MP_T5_01.gcode' -- a material dogbone/cupon, the OG test file
-'circular_test.gcode' -- checking that curved parts were handled equally well to the dogbone
+ - 'mug-test.gcode' -- a mug that offers more complex and larger geometry to test
+ - 'car_test.gcode' -- a complex car with many triangulation and mesh errors, to test corrupt stls going through (not recommended, because while it does work it takes over an hour)
+ - 'MP_T5_01.gcode' -- a material dogbone/cupon, the OG test file
+ - 'circular_test.gcode' -- checking that curved parts were handled equally well to the dogbone

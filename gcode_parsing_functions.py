@@ -96,10 +96,11 @@ def parse_line(passline):
 
 def line_divider(dist, split_dist, curr_data, prev_data, output_file, times):
     (num_intervals, remainder) = divmod(dist, split_dist)
+    output_file.write("; %f intervals\n" %(num_intervals))
     deltaX = curr_data[0] - prev_data[0]
     deltaY = curr_data[1] - prev_data[1]
-
-    for i in range(0, int(num_intervals)):
+    print(range(1,int(num_intervals)+1))
+    for i in range(1, int(num_intervals)+1):
         x_sub = prev_data[0] + ((i * deltaX) / num_intervals)
         y_sub = prev_data[1] + ((i * deltaY) / num_intervals)
 
@@ -111,7 +112,7 @@ def line_divider(dist, split_dist, curr_data, prev_data, output_file, times):
 
         else: # last one, so let's move to the final position and
             output_file.write("G1 X%f Y%f \n" %(curr_data[0], curr_data[1]))
-
+            output_file.write(";end of long trace")
     return([curr_data[0], curr_data[1], remainder]);
 
 

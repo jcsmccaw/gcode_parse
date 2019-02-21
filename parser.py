@@ -24,15 +24,17 @@ def parse():
     script = sys.argv[0]
     parse_file = sys.argv[1]
     params = sys.argv[2:]
-
+    print(params)
     if len(params) == 0:
-        parse_len = 2 # mm
-        parse_delay = 2000 # ms
+        parse_len = 2.0 # mm
+        parse_delay = 2000.0 # ms
     elif len(params) == 1:
-        parse_len = params[0]
+        parse_len = float(params[0])
+        parse_delay = 2000.0 # ms
     elif len(params) == 2:
-        parse_len = params[0]
-        parse_delay = params[1]
+        parse_len = float(params[0])
+        parse_delay = float(params[1])
+        print(parse_len)
     else:
         assert 1 in [0], \
             'Seems you have included a parameter I have not accounted for yet. Please check your input!'
@@ -87,7 +89,7 @@ def parse():
 
             while data_block[5] is not None:
 
-                if data_block[5].startswith('; layer 1,'):
+                if data_block[5].startswith('; layer 1'):
                     go = True
                 if(data_block[5].startswith('G1 ') and (go is True)):
                     data[5,:] = (parse_line(data_block[5]))
@@ -102,10 +104,19 @@ def parse():
                     else:
                         if(not np.isnan(data[5, 3])): # We have a printing motion, thus the fan signal is controlled
                             dist = pow(pow(data[5, 0] - curr_x, 2) + pow(data[5, 1] - curr_y, 2), 0.5)
-                            # print(dist)
+                            # print(data[5,:])
                             delta_dist = delta_dist + dist
+                            print(dist)
+                            print("::::::")
+                            print(delta_dist)
+                            # print(delta_dist)
+                            #print(dist)
+                            #print(type(dist))
+                            #print(type(parse_len))
+                            #print(parse_len)
+                            #print(dist > parse_len)
                             if(dist > parse_len):
-                                # print('long trace\n')
+                                parsed.write('; long trace\n')
                                 # Check to see if we can define prev_x and prev_y:
                                 # If data[5] isn't the last row in data: FIXME, this is a stupid way to define it and won't work
                                 if(data[5,:] is not data[-1, :]):
@@ -126,15 +137,21 @@ def parse():
                                 curr_x = div_out[0]
                                 curr_y = div_out[1]
                             elif((delta_dist > parse_len) and not (dist > parse_len)):
-                                # print('overhang\n')
+                                parsed.write('; overhang\n')
                                 cool_down(times[0], times[1], times[2], times[3], parsed)
-                                delta_dist = delta_dist - parse_len
+                                delta_dist = 0.0# delta_dist - parse_len
                                 out_line = create_line(data[5,:])
                                 output_line(parsed, out_line)
+
+                                curr_x = data[5,0]
+                                curr_y = data[5,1]
                             else:
-                                # print('short\n')
+                                parsed.write('; short\n')
                                 out_line = create_line(data[5,:])
                                 output_line(parsed, out_line)
+
+                                curr_x = data[5,0]
+                                curr_y = data[5,1]
                         else: # E is None
                             fan_off(parsed)
 
@@ -165,6 +182,6 @@ def parse():
 
             for line in footerlines:
                 output_line(parsed, line)
-                
+
 if __name__ == "__main__":
     parse()

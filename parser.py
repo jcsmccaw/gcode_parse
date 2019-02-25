@@ -28,13 +28,20 @@ def parse():
     if len(params) == 0:
         parse_len = 2.0 # mm
         parse_delay = 2000.0 # ms
+        restart_time = 0.0 # ms
     elif len(params) == 1:
         parse_len = float(params[0])
         parse_delay = 2000.0 # ms
+        restart_time = 0.0 # ms
     elif len(params) == 2:
         parse_len = float(params[0])
         parse_delay = float(params[1])
+        restart_time = 0.0 # ms
         print(parse_len)
+    elif len(params) == 3:
+        parse_len = float(params[0])
+        parse_delay = float(params[1])
+        restart_time = float(params[2])
     else:
         assert 1 in [0], \
             'Seems you have included a parameter I have not accounted for yet. Please check your input!'
@@ -43,9 +50,9 @@ def parse():
     output_a = parse_file.split('.')
     output = output_a[0] + '_parsed.gcode'
 
+    # idle_height = restart_height + 1 # mm
     idle_height = 0
-    restart_height = 0
-    times = [idle_height, parse_delay, restart_height, 0]
+    times = [idle_height, parse_delay, restart_time, 0]
     curr_data = [0, 0, 0, 0, 0]
     curr_x = 0
     curr_y = 0
@@ -91,6 +98,8 @@ def parse():
 
                 if data_block[5].startswith('; layer 1'):
                     go = True
+                if data_block[5].startswith(';END'):
+                    go = False
                 if(data_block[5].startswith('G1 ') and (go is True)):
                     data[5,:] = (parse_line(data_block[5]))
                 # print(np.isnan(data[5,0]))
@@ -106,17 +115,9 @@ def parse():
                             dist = pow(pow(data[5, 0] - curr_x, 2) + pow(data[5, 1] - curr_y, 2), 0.5)
                             # print(data[5,:])
                             delta_dist = delta_dist + dist
-                            print(dist)
-                            print("::::::")
-                            print(delta_dist)
-                            # print(delta_dist)
-                            #print(dist)
-                            #print(type(dist))
-                            #print(type(parse_len))
-                            #print(parse_len)
-                            #print(dist > parse_len)
+
                             if(dist > parse_len):
-                                parsed.write('; long trace\n')
+                                # parsed.write('; long trace\n')
                                 # Check to see if we can define prev_x and prev_y:
                                 # If data[5] isn't the last row in data: FIXME, this is a stupid way to define it and won't work
                                 if(data[5,:] is not data[-1, :]):
@@ -137,7 +138,7 @@ def parse():
                                 curr_x = div_out[0]
                                 curr_y = div_out[1]
                             elif((delta_dist > parse_len) and not (dist > parse_len)):
-                                parsed.write('; overhang\n')
+                                # parsed.write('; overhang\n')
                                 cool_down(times[0], times[1], times[2], times[3], parsed)
                                 delta_dist = 0.0# delta_dist - parse_len
                                 out_line = create_line(data[5,:])
@@ -146,7 +147,7 @@ def parse():
                                 curr_x = data[5,0]
                                 curr_y = data[5,1]
                             else:
-                                parsed.write('; short\n')
+                                # parsed.write('; short\n')
                                 out_line = create_line(data[5,:])
                                 output_line(parsed, out_line)
 
@@ -156,7 +157,7 @@ def parse():
                             fan_off(parsed)
 
 
-                elif(not np.isnan(data[5,2])): # We have a Z motion
+                elif((not np.isnan(data[5,2])) and (go is True)): # We have a Z motion
                     #print("Z Motion.")
                     print("Parsing Layer: " + str(layer) + "\n")
                     layer = layer + 1

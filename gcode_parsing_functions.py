@@ -12,17 +12,18 @@ Functions:
 import math
 import numpy as np
 
-def cool_down(idle_height, idle_time, restart_height, delE, output_file):
-    output_file.write("\n\nG91 ; relative positioning\n") # set relative positioning
-    output_file.write("M107\n") # turn the fan off
-    output_file.write("G0 Z%f ; idle height, relative\n" %(idle_height)) # move to idle height
+def cool_down(idle_height, idle_time, restart_time, delE, output_file):
+    output_file.write("\nG91 ; relative positioning\n") # set relative positioning
+    output_file.write("M107 ; fan off\n") # turn the fan off
+    # output_file.write("G0 Z%f ; idle height, relative\n" %(idle_height)) # move to idle height
     output_file.write("G4 P%f ; idle time, ms\n" %(idle_time))
-    output_file.write("M400 ; wait for everything\n")
-    output_file.write("G0 Z%f ;move to where you'd like to start printing again\n" %(restart_height - idle_height))
-    output_file.write("M400\n") # wait to get to the intermediate point before turning on the fan
-    output_file.write("M106 \n") # turn the fan (ultrasonic signal) back on
-    output_file.write("G1 Z%f E%f\n" %(-restart_height, delE*restart_height))
-    output_file.write("G90 ; global positioning again\n\n") # Go back to global coordinates
+    output_file.write("M400 ; wait\n")
+    # output_file.write("G0 Z%f ;move to where you'd like to start printing again\n" %(restart_height - idle_height))
+    output_file.write("M106 ; fan on \n") # turn the fan (ultrasonic signal) back on
+    output_file.write("G4 P%f ; re-init flow, ms\n" %(restart_time))
+    output_file.write("M400 ;wait\n") # wait to get to the intermediate point before turning on the fan
+    # output_file.write("G1 Z%f E%f\n" %(-restart_height, delE*restart_height))
+    output_file.write("G90 ; global positioning again\n") # Go back to global coordinates
     delta_extruded = 0 # reset the extruded length.
     return delta_extruded;
 
@@ -99,7 +100,7 @@ def line_divider(dist, split_dist, curr_data, prev_data, output_file, times):
     output_file.write("; %f intervals\n" %(num_intervals))
     deltaX = curr_data[0] - prev_data[0]
     deltaY = curr_data[1] - prev_data[1]
-    print(range(1,int(num_intervals)+1))
+    # print(range(1,int(num_intervals)+1))
     for i in range(1, int(num_intervals)+1):
         x_sub = prev_data[0] + ((i * deltaX) / num_intervals)
         y_sub = prev_data[1] + ((i * deltaY) / num_intervals)

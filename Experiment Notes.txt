@@ -27,3 +27,26 @@ RESULTS
 Tss measured during first layer: 44degC
 nozzle placement is better. Triggering still has observed gaps, though this is due to the sampling rate of the trigger in in the function generatior. First brim loop was trash, with little dot patterns and very low flow. On the second loop of the brim, flow picked up and by the third there was puddling at onset. Pressure system has developed a whistle, but holding at 90psi. We need to add a fan to help improve print speed. 
 Tss measured at z = 2.4mm: 44.5degC
+
+##########################
+Print 4
+Same clay as print 3.
+
+Settings:
+0.8mm nozzle dia
+300ms re-init
+2000ms pause
+0.3mm layer height
+2mm parse length
+
+When heated up fully, these settings looked really good. When not properly heated, it under-extruded like when warming it up. This is pretty good motivation to move toward closed-loop temperature control. A photo of the print has been added to the git repo. 
+
+##########################
+Print 5
+Same clay as 3 and 4; this was trying to raise the Tss of the nozzle, but a void opened in the clay and extrusion stopped. A photo of the voids is in the repo. 
+Settings:
+0.8mm nozzle dia
+400ms re-init
+2000ms pause
+0.3mm layer height
+2mm parse length

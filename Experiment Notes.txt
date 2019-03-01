@@ -50,3 +50,27 @@ Settings:
 2000ms pause
 0.3mm layer height
 2mm parse length
+
+###########################
+print 6
+new clay, exact same cylinder and settings as print 3. this was to get a time-lapse of the printing process; unfortunately, the camera sucked so there's a shitty video here in the repo that's as good as that camera can focus. 
+Settings:
+0.8mm nozzle dia
+500ms re-init
+2000ms pause
+0.3mm layer height
+2mm parse length
+
+Last 3-4mm didn't extrude because of an air bubble. 
+
+#########################
+Print 7
+New clay, testing the theory that the more clay in the nozzle, the more back pressure is lost to the friction between the clay and the wall of the syringe. Printing the mini_dogbone_parsed.gcode, with:
+Settings:
+0.8mm nozzle dia
+500ms re-init
+2000ms pause
+0.2mm layer height
+2mm parse length
+
+RESULTS:All tests failed because of air bubbles stopping the print -- this is one of the largest issues with this method.

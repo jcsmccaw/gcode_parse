@@ -95,7 +95,6 @@ def parse():
             data[5,:] = parse_line(data_block[5])
 
             while data_block[5] is not None:
-
                 if data_block[5].startswith('; layer 1'):
                     go = True
                 if data_block[5].startswith(';END'):

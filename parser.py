@@ -154,6 +154,9 @@ def parse():
                                 curr_y = data[5,1]
                         else: # E is None
                             fan_off(parsed)
+                            out_line = create_line(data[5,:])
+                            output_line(parsed, out_line)
+                            fan_on(parsed)
 
 
                 elif((not np.isnan(data[5,2])) and (go is True)): # We have a Z motion
@@ -162,6 +165,7 @@ def parse():
                     layer = layer + 1
                     out_line = create_line(data[5,:])
                     output_line(parsed, out_line)
+                    fan_on(parsed)
                     #print(out_line)
 
 
@@ -182,6 +186,7 @@ def parse():
 
             for line in footerlines:
                 output_line(parsed, line)
+                fan_on(parsed);
 
 if __name__ == "__main__":
     parse()

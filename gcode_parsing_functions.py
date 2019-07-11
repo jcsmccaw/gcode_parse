@@ -32,19 +32,25 @@ def output_line(output_file, line):
     return;
 
 
-def fan_toggle(output_file, line):
+def fan_toggle(output_file, line, restart_time):
     # This function turns the fan (ultrasonic) off, outputs the rapid or non-
     # extruding motion, then turns the fan back on.
     output_file.write('M107 ; turn fan off\n')
     output_file.write(line)
     output_file.write('M106 ; turn fan on\n')
+        
+    output_file.write("G4 P%f ; re-init flow, ms\n" %(restart_time))
+    output_file.write("M400 ;wait\n") # wait to get to the intermediate point before turning on the fan
     return;
 
 
 
-def fan_on(output_file):
+def fan_on(output_file, restart_time):
     output_file.write('M400 ; wait\n')
     output_file.write('M106 ; turn fan on \n')
+        
+    output_file.write("G4 P%f ; re-init flow, ms\n" %(restart_time))
+    output_file.write("M400 ;wait\n") # wait to get to the intermediate point before turning on the fan
     return;
 
 

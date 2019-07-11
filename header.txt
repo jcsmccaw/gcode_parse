@@ -7,4 +7,4 @@ G1 Z0.2 F1200 ; raise nozzle
 M106 ; fan on to start flow
 G1 X85 Y0 F600 ; extrude a bit across the front
 M107 ; stop flow
-G1 Z0.200 F300 ; set our feedrate for the print job
+G1 Z0.200 F4000 ; set our feedrate for the print job

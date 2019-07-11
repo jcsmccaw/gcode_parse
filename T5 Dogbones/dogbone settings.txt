@@ -1,0 +1,16 @@
+270 Vpp
+0.3mm layer height
+-0.3 Z offset
+Too low, Vpp raised from 250 to 270 to get flow rate started
+
+FINAL 0 Degree Samples:
+263 Vpp
+0 Z offset
+0.3mm layer height
+4000 mm/min feedrate
+80psi backpresssure
+
+
+90 Degree Samples:
+
+

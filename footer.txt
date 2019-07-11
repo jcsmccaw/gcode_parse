@@ -4,4 +4,5 @@ G91 ; relative positioning
 G0 Z1.0 F1800 ; move up off the part
 G90 ; global positioning
 G0 X0 Y110 F1000 ; prepare for part removal 
+M107 ; make sure fan is off
 M84 ; disable motors

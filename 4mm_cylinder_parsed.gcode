@@ -1,0 +1,2566 @@
+; Header file for Monoprice Mini
+; Start with Fan Off:
+M107 ; fan off
+G90 ; absolute positioning
+G28 ; home all axes
+G1 Z0.2 F1200 ; raise nozzle
+M106 ; fan on to start flow
+G1 X85 Y0 F600 ; extrude a bit across the front
+M107 ; stop flow
+G1 Z0.200 F4000 ; set our feedrate for the print job
+G1  Z1.35 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X76.006 Y43.977 
+G1 X76.189 Y43.751 
+G1 X76.449 Y43.504 
+G1 X76.652 Y43.35 
+G1 X76.902 Y43.201 
+G1 X77.168 Y43.082 
+G1 X77.415 Y43.001 
+G1 X77.7 Y42.942 
+G1 X77.99 Y42.915 
+G1 X78.312 Y42.924 
+G1 X78.6 Y42.967 
+G1 X78.882 Y43.043 
+G1 X79.124 Y43.137 
+G1 X79.382 Y43.272 
+G1 X79.648 Y43.454 
+G1 X79.867 Y43.646 
+G1 X80.043 Y43.837 
+G1 X80.215 Y44.072 
+G1 X80.36 Y44.324 
+G1 X80.486 Y44.622 
+G1 X80.559 Y44.871 
+G1 X80.64 Y45.279 
+G1 X80.614 Y45.739 
+G1 X80.566 Y46.026 
+G1 X80.486 Y46.306 
+G1 X80.36 Y46.603 
+G1 X80.232 Y46.829 
+G1 X80.063 Y47.066 
+G1 X79.867 Y47.281 
+G1 X79.648 Y47.473 
+G1 X79.382 Y47.656 
+G1 X79.124 Y47.79 
+G1 X78.852 Y47.894 
+G1 X78.6 Y47.96 
+G1 X78.312 Y48.003 
+G1 X77.99 Y48.012 
+G1 X77.731 Y47.99 
+G1 X77.445 Y47.934 
+G1 X77.168 Y47.846 
+G1 X76.902 Y47.726 
+G1 X76.652 Y47.578 
+G1 X76.42 Y47.401 
+G1 X76.189 Y47.176 
+G1 X76.025 Y46.975 
+G1 X75.866 Y46.731 
+G1 X75.736 Y46.471 
+G1 X75.636 Y46.197 
+G1 X75.563 Y45.883 
+G1 X75.532 Y45.594 
+G1 X75.533 Y45.302 
+G1 X75.563 Y45.044 
+G1 X75.627 Y44.76 
+G1 X75.723 Y44.485 
+G1 X75.838 Y44.249 
+G1 X75.838 Y44.249 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.559 Y46.19 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.461 Y46.361 
+G1 X79.221 Y46.653 
+G1 X78.93 Y46.876 
+G1 X78.764 Y46.964 
+G1 X78.588 Y47.032 
+G1 X78.22 Y47.107 
+G1 X77.844 Y47.096 
+G1 X77.48 Y47.001 
+G1 X77.309 Y46.922 
+G1 X76.998 Y46.71 
+G1 X76.744 Y46.433 
+G1 X76.559 Y46.106 
+G1 X76.453 Y45.745 
+G1 X76.432 Y45.558 
+G1 X76.453 Y45.182 
+G1 X76.559 Y44.822 
+G1 X76.744 Y44.494 
+G1 X76.998 Y44.217 
+G1 X77.148 Y44.102 
+G1 X77.48 Y43.927 
+G1 X77.842 Y43.831 
+G1 X78.039 Y43.816 
+G1 X78.415 Y43.85 
+G1 X78.764 Y43.963 
+G1 X79.086 Y44.157 
+G1 X79.355 Y44.42 
+G1 X79.559 Y44.736 
+G1 X79.632 Y44.909 
+G1 X79.685 Y45.09 
+G1 X79.728 Y45.464 
+G1 X79.685 Y45.837 
+G1 X79.583 Y46.135 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.559 Y46.19 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.999 Y45.911 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X78.945 Y46.004 
+G1 X78.772 Y46.215 
+G1 X78.504 Y46.395 
+G1 X78.395 Y46.437 
+G1 X78.166 Y46.483 
+G1 X77.933 Y46.477 
+G1 X77.707 Y46.417 
+G1 X77.601 Y46.369 
+G1 X77.408 Y46.237 
+G1 X77.25 Y46.065 
+G1 X77.136 Y45.862 
+G1 X77.07 Y45.638 
+G1 X77.057 Y45.405 
+G1 X77.07 Y45.289 
+G1 X77.136 Y45.065 
+G1 X77.25 Y44.862 
+G1 X77.408 Y44.69 
+G1 X77.501 Y44.619 
+G1 X77.707 Y44.51 
+G1 X77.818 Y44.474 
+G1 X78.036 Y44.443 
+G1 X78.308 Y44.467 
+G1 X78.504 Y44.533 
+G1 X78.704 Y44.653 
+G1 X78.871 Y44.816 
+G1 X78.94 Y44.91 
+G1 X79.043 Y45.12 
+G1 X79.075 Y45.232 
+G1 X79.102 Y45.464 
+G1 X79.075 Y45.695 
+G1 X79.022 Y45.856 
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.466 Y45.554 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X78.434 Y45.641 
+G1 X78.284 Y45.804 
+G1 X78.157 Y45.853 
+G1 X78.022 Y45.857 
+G1 X77.893 Y45.815 
+G1 X77.757 Y45.697 
+G1 X77.687 Y45.531 
+G1 X77.687 Y45.396 
+G1 X77.732 Y45.268 
+G1 X77.854 Y45.135 
+G1 X78.024 Y45.07 
+G1 X78.201 Y45.085 
+G1 X78.321 Y45.149 
+G1 X78.413 Y45.249 
+G1 X78.466 Y45.374 
+G1 X78.474 Y45.494 
+G1 X78.474 Y45.494 
+G1  Z1.6 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.12 Y44.827 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X77.922 Y44.832 
+G1 X77.772 Y44.872 
+G1 X77.597 Y44.981 
+G1 X77.464 Y45.138 
+G1 X77.402 Y45.284 
+G1 X77.378 Y45.431 
+G1 X78.781 Y45.431 
+G1 X78.749 Y45.667 
+G1 X78.679 Y45.809 
+G1 X78.587 Y45.922 
+G1 X78.421 Y46.034 
+G1 X77.742 Y46.034 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.106 Y45.742 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.035 Y45.934 
+G1 X78.904 Y46.138 
+G1 X78.729 Y46.308 
+G1 X78.629 Y46.376 
+G1 X78.408 Y46.477 
+G1 X78.29 Y46.508 
+G1 X78.048 Y46.529 
+G1 X77.818 Y46.496 
+G1 X77.68 Y46.449 
+G1 X77.459 Y46.329 
+G1 X77.293 Y46.184 
+G1 X77.151 Y45.988 
+G1 X77.097 Y45.879 
+G1 X77.028 Y45.645 
+G1 X77.014 Y45.403 
+G1 X77.056 Y45.163 
+G1 X77.151 Y44.94 
+G1 X77.216 Y44.837 
+G1 X77.381 Y44.658 
+G1 X77.581 Y44.521 
+G1 X77.692 Y44.47 
+G1 X77.917 Y44.411 
+G1 X78.062 Y44.401 
+G1 X78.313 Y44.425 
+G1 X78.521 Y44.494 
+G1 X78.729 Y44.62 
+G1 X78.821 Y44.699 
+G1 X78.975 Y44.887 
+G1 X79.035 Y44.993 
+G1 X79.117 Y45.222 
+G1 X79.144 Y45.464 
+G1 X79.12 Y45.684 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.438 Y45.839 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.346 Y46.087 
+G1 X79.172 Y46.358 
+G1 X78.941 Y46.582 
+G1 X78.808 Y46.673 
+G1 X78.515 Y46.807 
+G1 X78.359 Y46.848 
+G1 X78.038 Y46.876 
+G1 X77.726 Y46.831 
+G1 X77.541 Y46.767 
+G1 X77.27 Y46.621 
+G1 X77.038 Y46.419 
+G1 X76.848 Y46.158 
+G1 X76.777 Y46.014 
+G1 X76.687 Y45.705 
+G1 X76.668 Y45.383 
+G1 X76.723 Y45.066 
+G1 X76.848 Y44.769 
+G1 X76.936 Y44.633 
+G1 X77.153 Y44.396 
+G1 X77.419 Y44.214 
+G1 X77.566 Y44.147 
+G1 X77.871 Y44.067 
+G1 X78.067 Y44.054 
+G1 X78.373 Y44.083 
+G1 X78.665 Y44.179 
+G1 X78.941 Y44.345 
+G1 X79.172 Y44.569 
+G1 X79.267 Y44.7 
+G1 X79.409 Y44.989 
+G1 X79.455 Y45.144 
+G1 X79.491 Y45.464 
+G1 X79.455 Y45.782 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.79 Y45.942 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.676 Y46.249 
+G1 X79.456 Y46.59 
+G1 X79.319 Y46.74 
+G1 X78.998 Y46.988 
+G1 X78.628 Y47.156 
+G1 X78.432 Y47.208 
+G1 X78.028 Y47.243 
+G1 X77.628 Y47.185 
+G1 X77.392 Y47.103 
+G1 X77.07 Y46.929 
+G1 X76.767 Y46.667 
+G1 X76.529 Y46.339 
+G1 X76.439 Y46.156 
+G1 X76.325 Y45.767 
+G1 X76.302 Y45.362 
+G1 X76.371 Y44.962 
+G1 X76.529 Y44.589 
+G1 X76.639 Y44.418 
+G1 X76.913 Y44.119 
+G1 X77.248 Y43.89 
+G1 X77.433 Y43.805 
+G1 X77.823 Y43.703 
+G1 X78.072 Y43.687 
+G1 X78.437 Y43.721 
+G1 X78.628 Y43.771 
+G1 X78.818 Y43.845 
+G1 X79.165 Y44.054 
+G1 X79.456 Y44.337 
+G1 X79.676 Y44.678 
+G1 X79.755 Y44.866 
+G1 X79.847 Y45.261 
+G1 X79.847 Y45.667 
+G1 X79.807 Y45.885 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1  Z1.85 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.717 Y45.529 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X78.717 Y45.402 
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.114 Y46.163 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X78.114 Y44.768 
+G1 X77.98 Y44.769 
+G1 X77.791 Y44.828 
+G1 X77.66 Y44.917 
+G1 X77.562 Y45.025 
+G1 X77.511 Y45.115 
+G1 X77.511 Y45.823 
+G1 X77.449 Y45.636 
+G1 X77.441 Y45.491 
+G1 X77.468 Y45.335 
+G1 X77.511 Y45.242 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.089 Y45.775 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.035 Y45.934 
+G1 X78.904 Y46.138 
+G1 X78.821 Y46.228 
+G1 X78.629 Y46.376 
+G1 X78.408 Y46.477 
+G1 X78.29 Y46.508 
+G1 X78.048 Y46.529 
+G1 X77.808 Y46.494 
+G1 X77.581 Y46.406 
+G1 X77.381 Y46.269 
+G1 X77.216 Y46.09 
+G1 X77.151 Y45.988 
+G1 X77.097 Y45.879 
+G1 X77.028 Y45.645 
+G1 X77.014 Y45.403 
+G1 X77.056 Y45.163 
+G1 X77.097 Y45.049 
+G1 X77.216 Y44.837 
+G1 X77.381 Y44.658 
+G1 X77.581 Y44.521 
+G1 X77.692 Y44.47 
+G1 X77.913 Y44.412 
+G1 X78.084 Y44.402 
+G1 X78.408 Y44.45 
+G1 X78.657 Y44.574 
+G1 X78.835 Y44.715 
+G1 X78.975 Y44.887 
+G1 X79.035 Y44.993 
+G1 X79.082 Y45.105 
+G1 X79.137 Y45.342 
+G1 X79.134 Y45.588 
+G1 X79.103 Y45.717 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.426 Y45.856 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.346 Y46.087 
+G1 X79.172 Y46.358 
+G1 X79.063 Y46.477 
+G1 X78.808 Y46.673 
+G1 X78.515 Y46.807 
+G1 X78.359 Y46.848 
+G1 X78.038 Y46.876 
+G1 X77.719 Y46.83 
+G1 X77.419 Y46.713 
+G1 X77.153 Y46.531 
+G1 X76.936 Y46.294 
+G1 X76.848 Y46.158 
+G1 X76.777 Y46.014 
+G1 X76.687 Y45.705 
+G1 X76.668 Y45.383 
+G1 X76.723 Y45.066 
+G1 X76.777 Y44.914 
+G1 X76.936 Y44.633 
+G1 X77.153 Y44.396 
+G1 X77.419 Y44.214 
+G1 X77.566 Y44.147 
+G1 X77.869 Y44.067 
+G1 X78.092 Y44.055 
+G1 X78.372 Y44.082 
+G1 X78.515 Y44.12 
+G1 X78.657 Y44.175 
+G1 X78.851 Y44.285 
+G1 X79.072 Y44.46 
+G1 X79.267 Y44.7 
+G1 X79.346 Y44.84 
+G1 X79.409 Y44.989 
+G1 X79.482 Y45.303 
+G1 X79.477 Y45.641 
+G1 X79.44 Y45.797 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.783 Y45.941 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.752 Y46.067 
+G1 X79.676 Y46.249 
+G1 X79.456 Y46.59 
+G1 X79.319 Y46.74 
+G1 X78.998 Y46.988 
+G1 X78.628 Y47.156 
+G1 X78.432 Y47.208 
+G1 X78.028 Y47.243 
+G1 X77.626 Y47.185 
+G1 X77.248 Y47.038 
+G1 X76.913 Y46.809 
+G1 X76.639 Y46.51 
+G1 X76.529 Y46.339 
+G1 X76.439 Y46.156 
+G1 X76.325 Y45.767 
+G1 X76.302 Y45.362 
+G1 X76.371 Y44.962 
+G1 X76.439 Y44.771 
+G1 X76.639 Y44.418 
+G1 X76.913 Y44.119 
+G1 X77.248 Y43.89 
+G1 X77.433 Y43.805 
+G1 X77.822 Y43.703 
+G1 X78.099 Y43.687 
+G1 X78.437 Y43.721 
+G1 X78.628 Y43.771 
+G1 X78.815 Y43.844 
+G1 X79.056 Y43.981 
+G1 X79.322 Y44.191 
+G1 X79.576 Y44.502 
+G1 X79.676 Y44.678 
+G1 X79.755 Y44.866 
+G1 X79.847 Y45.261 
+G1 X79.858 Y45.462 
+G1 X79.84 Y45.698 
+G1 X79.796 Y45.882 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.659 Y45.981 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.659 Y45.981 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1  Z2.1 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.159 Y44.828 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X77.911 Y44.834 
+G1 X77.797 Y44.864 
+G1 X77.587 Y44.99 
+G1 X77.507 Y45.077 
+G1 X77.444 Y45.185 
+G1 X77.399 Y45.296 
+G1 X77.378 Y45.432 
+G1 X78.781 Y45.432 
+G1 X78.764 Y45.609 
+G1 X78.72 Y45.734 
+G1 X78.577 Y45.93 
+G1 X78.42 Y46.035 
+G1 X77.733 Y46.035 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.106 Y45.742 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.042 Y45.918 
+G1 X78.939 Y46.086 
+G1 X78.808 Y46.24 
+G1 X78.629 Y46.376 
+G1 X78.424 Y46.471 
+G1 X78.232 Y46.514 
+G1 X78.03 Y46.527 
+G1 X77.808 Y46.494 
+G1 X77.581 Y46.406 
+G1 X77.381 Y46.269 
+G1 X77.216 Y46.09 
+G1 X77.151 Y45.988 
+G1 X77.097 Y45.879 
+G1 X77.028 Y45.645 
+G1 X77.014 Y45.403 
+G1 X77.052 Y45.18 
+G1 X77.125 Y44.997 
+G1 X77.228 Y44.823 
+G1 X77.368 Y44.67 
+G1 X77.529 Y44.556 
+G1 X77.709 Y44.465 
+G1 X77.91 Y44.412 
+G1 X78.107 Y44.403 
+G1 X78.308 Y44.424 
+G1 X78.505 Y44.488 
+G1 X78.676 Y44.586 
+G1 X78.834 Y44.713 
+G1 X78.975 Y44.887 
+G1 X79.035 Y44.993 
+G1 X79.117 Y45.222 
+G1 X79.144 Y45.464 
+G1 X79.12 Y45.684 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.438 Y45.84 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.351 Y46.077 
+G1 X79.22 Y46.29 
+G1 X79.054 Y46.484 
+G1 X78.808 Y46.673 
+G1 X78.525 Y46.803 
+G1 X78.281 Y46.858 
+G1 X78.027 Y46.875 
+G1 X77.719 Y46.83 
+G1 X77.419 Y46.713 
+G1 X77.153 Y46.531 
+G1 X76.936 Y46.294 
+G1 X76.848 Y46.158 
+G1 X76.777 Y46.014 
+G1 X76.687 Y45.705 
+G1 X76.668 Y45.383 
+G1 X76.721 Y45.076 
+G1 X76.813 Y44.844 
+G1 X76.943 Y44.624 
+G1 X77.146 Y44.404 
+G1 X77.349 Y44.259 
+G1 X77.577 Y44.144 
+G1 X77.867 Y44.068 
+G1 X78.116 Y44.055 
+G1 X78.37 Y44.082 
+G1 X78.655 Y44.175 
+G1 X78.872 Y44.299 
+G1 X79.071 Y44.459 
+G1 X79.267 Y44.7 
+G1 X79.346 Y44.84 
+G1 X79.455 Y45.144 
+G1 X79.491 Y45.464 
+G1 X79.455 Y45.782 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.79 Y45.943 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.677 Y46.245 
+G1 X79.517 Y46.505 
+G1 X79.316 Y46.743 
+G1 X78.998 Y46.988 
+G1 X78.632 Y47.155 
+G1 X78.334 Y47.221 
+G1 X78.023 Y47.242 
+G1 X77.626 Y47.185 
+G1 X77.248 Y47.038 
+G1 X76.913 Y46.809 
+G1 X76.639 Y46.51 
+G1 X76.529 Y46.339 
+G1 X76.439 Y46.156 
+G1 X76.325 Y45.767 
+G1 X76.302 Y45.362 
+G1 X76.37 Y44.966 
+G1 X76.483 Y44.682 
+G1 X76.641 Y44.414 
+G1 X76.91 Y44.122 
+G1 X77.159 Y43.944 
+G1 X77.437 Y43.804 
+G1 X77.821 Y43.703 
+G1 X78.127 Y43.688 
+G1 X78.436 Y43.721 
+G1 X78.628 Y43.771 
+G1 X78.814 Y43.843 
+G1 X79.079 Y43.996 
+G1 X79.322 Y44.191 
+G1 X79.576 Y44.502 
+G1 X79.676 Y44.678 
+G1 X79.755 Y44.866 
+G1 X79.847 Y45.261 
+G1 X79.847 Y45.667 
+G1 X79.806 Y45.885 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1  Z2.35 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.717 Y45.529 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X78.717 Y45.402 
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.114 Y46.161 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X78.114 Y44.765 
+G1 X77.972 Y44.771 
+G1 X77.848 Y44.804 
+G1 X77.718 Y44.873 
+G1 X77.608 Y44.968 
+G1 X77.523 Y45.086 
+G1 X77.511 Y45.812 
+G1 X77.449 Y45.636 
+G1 X77.44 Y45.479 
+G1 X77.461 Y45.359 
+G1 X77.511 Y45.241 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.111 Y45.711 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.048 Y45.896 
+G1 X78.966 Y46.052 
+G1 X78.821 Y46.228 
+G1 X78.629 Y46.376 
+G1 X78.408 Y46.477 
+G1 X78.29 Y46.508 
+G1 X78.048 Y46.529 
+G1 X77.828 Y46.498 
+G1 X77.619 Y46.421 
+G1 X77.465 Y46.334 
+G1 X77.293 Y46.184 
+G1 X77.151 Y45.988 
+G1 X77.097 Y45.879 
+G1 X77.028 Y45.645 
+G1 X77.014 Y45.403 
+G1 X77.056 Y45.163 
+G1 X77.151 Y44.94 
+G1 X77.216 Y44.837 
+G1 X77.381 Y44.658 
+G1 X77.581 Y44.521 
+G1 X77.692 Y44.47 
+G1 X77.907 Y44.413 
+G1 X78.129 Y44.403 
+G1 X78.305 Y44.423 
+G1 X78.502 Y44.487 
+G1 X78.694 Y44.599 
+G1 X78.831 Y44.71 
+G1 X78.975 Y44.887 
+G1 X79.035 Y44.993 
+G1 X79.117 Y45.222 
+G1 X79.144 Y45.464 
+G1 X79.126 Y45.653 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.439 Y45.823 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.367 Y46.033 
+G1 X79.261 Y46.235 
+G1 X79.172 Y46.358 
+G1 X78.941 Y46.582 
+G1 X78.808 Y46.673 
+G1 X78.515 Y46.807 
+G1 X78.359 Y46.848 
+G1 X78.038 Y46.876 
+G1 X77.732 Y46.832 
+G1 X77.473 Y46.736 
+G1 X77.274 Y46.624 
+G1 X77.038 Y46.419 
+G1 X76.848 Y46.158 
+G1 X76.777 Y46.014 
+G1 X76.687 Y45.705 
+G1 X76.668 Y45.383 
+G1 X76.723 Y45.066 
+G1 X76.848 Y44.769 
+G1 X76.936 Y44.633 
+G1 X77.153 Y44.396 
+G1 X77.419 Y44.214 
+G1 X77.566 Y44.147 
+G1 X77.865 Y44.068 
+G1 X78.141 Y44.056 
+G1 X78.368 Y44.081 
+G1 X78.653 Y44.174 
+G1 X78.892 Y44.313 
+G1 X79.069 Y44.457 
+G1 X79.267 Y44.7 
+G1 X79.409 Y44.989 
+G1 X79.455 Y45.144 
+G1 X79.491 Y45.464 
+G1 X79.458 Y45.766 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.786 Y45.941 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.705 Y46.178 
+G1 X79.574 Y46.429 
+G1 X79.456 Y46.59 
+G1 X79.319 Y46.74 
+G1 X78.998 Y46.988 
+G1 X78.628 Y47.156 
+G1 X78.432 Y47.208 
+G1 X78.028 Y47.243 
+G1 X77.631 Y47.186 
+G1 X77.319 Y47.069 
+G1 X77.071 Y46.931 
+G1 X76.767 Y46.667 
+G1 X76.529 Y46.339 
+G1 X76.439 Y46.156 
+G1 X76.325 Y45.767 
+G1 X76.302 Y45.362 
+G1 X76.371 Y44.962 
+G1 X76.529 Y44.589 
+G1 X76.639 Y44.418 
+G1 X76.913 Y44.119 
+G1 X77.248 Y43.89 
+G1 X77.433 Y43.805 
+G1 X77.821 Y43.703 
+G1 X78.154 Y43.689 
+G1 X78.435 Y43.72 
+G1 X78.628 Y43.771 
+G1 X78.813 Y43.843 
+G1 X79.101 Y44.011 
+G1 X79.321 Y44.19 
+G1 X79.576 Y44.502 
+G1 X79.676 Y44.678 
+G1 X79.755 Y44.866 
+G1 X79.847 Y45.261 
+G1 X79.847 Y45.667 
+G1 X79.805 Y45.885 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.543 Y45.999 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1  Z2.6 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.199 Y44.83 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X77.905 Y44.836 
+G1 X77.727 Y44.892 
+G1 X77.597 Y44.981 
+G1 X77.464 Y45.138 
+G1 X77.402 Y45.284 
+G1 X77.378 Y45.433 
+G1 X78.781 Y45.433 
+G1 X78.749 Y45.667 
+G1 X78.679 Y45.81 
+G1 X78.6 Y45.907 
+G1 X78.422 Y46.036 
+G1 X77.736 Y46.036 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.106 Y45.742 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.035 Y45.934 
+G1 X78.904 Y46.138 
+G1 X78.642 Y46.364 
+G1 X78.511 Y46.437 
+G1 X78.29 Y46.508 
+G1 X78.048 Y46.529 
+G1 X77.808 Y46.494 
+G1 X77.581 Y46.406 
+G1 X77.477 Y46.343 
+G1 X77.293 Y46.184 
+G1 X77.151 Y45.988 
+G1 X77.097 Y45.879 
+G1 X77.028 Y45.645 
+G1 X77.014 Y45.403 
+G1 X77.056 Y45.163 
+G1 X77.151 Y44.94 
+G1 X77.216 Y44.837 
+G1 X77.381 Y44.658 
+G1 X77.581 Y44.521 
+G1 X77.692 Y44.47 
+G1 X77.905 Y44.413 
+G1 X78.151 Y44.404 
+G1 X78.301 Y44.422 
+G1 X78.5 Y44.486 
+G1 X78.713 Y44.612 
+G1 X78.829 Y44.708 
+G1 X78.975 Y44.887 
+G1 X79.082 Y45.105 
+G1 X79.117 Y45.222 
+G1 X79.144 Y45.464 
+G1 X79.12 Y45.684 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.438 Y45.839 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.346 Y46.087 
+G1 X79.172 Y46.358 
+G1 X79.073 Y46.466 
+G1 X78.835 Y46.653 
+G1 X78.659 Y46.751 
+G1 X78.359 Y46.848 
+G1 X78.038 Y46.876 
+G1 X77.719 Y46.83 
+G1 X77.419 Y46.713 
+G1 X77.153 Y46.531 
+G1 X76.936 Y46.294 
+G1 X76.848 Y46.158 
+G1 X76.777 Y46.014 
+G1 X76.687 Y45.705 
+G1 X76.668 Y45.383 
+G1 X76.723 Y45.066 
+G1 X76.848 Y44.769 
+G1 X76.936 Y44.633 
+G1 X77.153 Y44.396 
+G1 X77.419 Y44.214 
+G1 X77.566 Y44.147 
+G1 X77.863 Y44.068 
+G1 X78.166 Y44.057 
+G1 X78.366 Y44.081 
+G1 X78.652 Y44.173 
+G1 X78.912 Y44.327 
+G1 X79.068 Y44.456 
+G1 X79.267 Y44.7 
+G1 X79.346 Y44.84 
+G1 X79.455 Y45.144 
+G1 X79.491 Y45.464 
+G1 X79.455 Y45.782 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.79 Y45.943 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.676 Y46.249 
+G1 X79.456 Y46.59 
+G1 X79.322 Y46.736 
+G1 X79.039 Y46.959 
+G1 X78.815 Y47.083 
+G1 X78.432 Y47.208 
+G1 X78.028 Y47.243 
+G1 X77.626 Y47.185 
+G1 X77.248 Y47.038 
+G1 X76.913 Y46.809 
+G1 X76.639 Y46.51 
+G1 X76.529 Y46.339 
+G1 X76.439 Y46.156 
+G1 X76.325 Y45.767 
+G1 X76.302 Y45.362 
+G1 X76.371 Y44.962 
+G1 X76.529 Y44.589 
+G1 X76.639 Y44.418 
+G1 X76.913 Y44.119 
+G1 X77.248 Y43.89 
+G1 X77.433 Y43.805 
+G1 X77.82 Y43.703 
+G1 X78.181 Y43.69 
+G1 X78.434 Y43.72 
+G1 X78.628 Y43.771 
+G1 X78.813 Y43.843 
+G1 X79.124 Y44.027 
+G1 X79.321 Y44.189 
+G1 X79.576 Y44.502 
+G1 X79.676 Y44.678 
+G1 X79.755 Y44.866 
+G1 X79.847 Y45.261 
+G1 X79.847 Y45.667 
+G1 X79.807 Y45.885 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1  Z2.85 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.718 Y45.516 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X78.718 Y45.389 
+M400 ; wait
+M107 ; turn fan off 
+G1 X78.115 Y46.161 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X78.115 Y44.768 
+G1 X77.966 Y44.773 
+G1 X77.848 Y44.804 
+G1 X77.668 Y44.909 
+G1 X77.533 Y45.069 
+G1 X77.512 Y45.12 
+G1 X77.512 Y45.825 
+G1 X77.449 Y45.636 
+G1 X77.441 Y45.489 
+G1 X77.461 Y45.369 
+G1 X77.512 Y45.247 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.106 Y45.742 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.035 Y45.934 
+G1 X78.904 Y46.138 
+G1 X78.624 Y46.376 
+G1 X78.515 Y46.435 
+G1 X78.29 Y46.508 
+G1 X78.048 Y46.529 
+G1 X77.808 Y46.494 
+G1 X77.581 Y46.406 
+G1 X77.381 Y46.269 
+G1 X77.293 Y46.184 
+G1 X77.151 Y45.988 
+G1 X77.097 Y45.879 
+G1 X77.028 Y45.645 
+G1 X77.014 Y45.403 
+G1 X77.05 Y45.188 
+G1 X77.155 Y44.938 
+G1 X77.22 Y44.832 
+G1 X77.381 Y44.658 
+G1 X77.477 Y44.584 
+G1 X77.692 Y44.47 
+G1 X77.903 Y44.414 
+G1 X78.173 Y44.405 
+G1 X78.296 Y44.421 
+G1 X78.521 Y44.494 
+G1 X78.729 Y44.62 
+G1 X78.904 Y44.789 
+G1 X78.975 Y44.887 
+G1 X79.082 Y45.105 
+G1 X79.117 Y45.222 
+G1 X79.144 Y45.464 
+G1 X79.12 Y45.684 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.438 Y45.839 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.346 Y46.087 
+G1 X79.172 Y46.358 
+G1 X79.074 Y46.465 
+G1 X78.815 Y46.667 
+G1 X78.662 Y46.75 
+G1 X78.359 Y46.848 
+G1 X78.038 Y46.876 
+G1 X77.719 Y46.83 
+G1 X77.419 Y46.713 
+G1 X77.153 Y46.531 
+G1 X76.936 Y46.294 
+G1 X76.848 Y46.158 
+G1 X76.777 Y46.014 
+G1 X76.687 Y45.705 
+G1 X76.668 Y45.383 
+G1 X76.72 Y45.081 
+G1 X76.846 Y44.778 
+G1 X76.938 Y44.63 
+G1 X77.153 Y44.396 
+G1 X77.281 Y44.298 
+G1 X77.566 Y44.147 
+G1 X77.862 Y44.068 
+G1 X78.19 Y44.058 
+G1 X78.363 Y44.08 
+G1 X78.665 Y44.179 
+G1 X78.941 Y44.345 
+G1 X79.172 Y44.569 
+G1 X79.267 Y44.7 
+G1 X79.409 Y44.989 
+G1 X79.455 Y45.144 
+G1 X79.491 Y45.464 
+G1 X79.455 Y45.782 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.79 Y45.943 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.676 Y46.249 
+G1 X79.456 Y46.59 
+G1 X79.323 Y46.736 
+G1 X79.016 Y46.974 
+G1 X78.816 Y47.083 
+G1 X78.432 Y47.208 
+G1 X78.028 Y47.243 
+G1 X77.626 Y47.185 
+G1 X77.248 Y47.038 
+G1 X76.913 Y46.809 
+G1 X76.639 Y46.51 
+G1 X76.529 Y46.339 
+G1 X76.439 Y46.156 
+G1 X76.325 Y45.767 
+G1 X76.302 Y45.362 
+G1 X76.37 Y44.968 
+G1 X76.519 Y44.61 
+G1 X76.64 Y44.416 
+G1 X76.913 Y44.119 
+G1 X77.248 Y43.89 
+G1 X77.433 Y43.805 
+G1 X77.82 Y43.703 
+G1 X78.208 Y43.691 
+G1 X78.433 Y43.72 
+G1 X78.628 Y43.771 
+G1 X78.818 Y43.845 
+G1 X79.165 Y44.054 
+G1 X79.456 Y44.337 
+G1 X79.676 Y44.678 
+G1 X79.755 Y44.866 
+G1 X79.847 Y45.261 
+G1 X79.847 Y45.667 
+G1 X79.807 Y45.885 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1  Z3.1 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1  Z3.1 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X77.855 Y45.174 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X77.947 Y45.126 
+G1 X78.13 Y45.102 
+G1 X78.318 Y45.187 
+G1 X78.429 Y45.361 
+G1 X78.441 Y45.464 
+G1 X78.429 Y45.567 
+G1 X78.331 Y45.724 
+G1 X78.191 Y45.809 
+G1 X78.068 Y45.834 
+G1 X77.947 Y45.802 
+G1 X77.795 Y45.695 
+G1 X77.744 Y45.605 
+G1 X77.716 Y45.443 
+G1 X77.771 Y45.266 
+G1 X77.815 Y45.218 
+M400 ; wait
+M107 ; turn fan off 
+G1 X77.607 Y44.905 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X77.814 Y44.784 
+G1 X77.975 Y44.741 
+G1 X78.149 Y44.736 
+G1 X78.382 Y44.8 
+G1 X78.582 Y44.934 
+G1 X78.692 Y45.069 
+G1 X78.77 Y45.227 
+G1 X78.808 Y45.464 
+G1 X78.77 Y45.7 
+G1 X78.692 Y45.858 
+G1 X78.587 Y45.987 
+G1 X78.455 Y46.089 
+G1 X78.304 Y46.158 
+G1 X78.058 Y46.195 
+G1 X77.814 Y46.144 
+G1 X77.666 Y46.066 
+G1 X77.534 Y45.951 
+G1 X77.406 Y45.748 
+G1 X77.359 Y45.588 
+G1 X77.35 Y45.422 
+G1 X77.378 Y45.258 
+G1 X77.446 Y45.098 
+G1 X77.567 Y44.949 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.106 Y45.742 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.035 Y45.934 
+G1 X78.904 Y46.138 
+G1 X78.729 Y46.308 
+G1 X78.629 Y46.376 
+G1 X78.408 Y46.477 
+G1 X78.29 Y46.508 
+G1 X78.048 Y46.529 
+G1 X77.808 Y46.494 
+G1 X77.583 Y46.407 
+G1 X77.381 Y46.269 
+G1 X77.216 Y46.09 
+G1 X77.151 Y45.988 
+G1 X77.097 Y45.879 
+G1 X77.028 Y45.645 
+G1 X77.014 Y45.403 
+G1 X77.056 Y45.163 
+G1 X77.15 Y44.942 
+G1 X77.217 Y44.837 
+G1 X77.381 Y44.658 
+G1 X77.581 Y44.521 
+G1 X77.692 Y44.47 
+G1 X77.927 Y44.409 
+G1 X78.168 Y44.402 
+G1 X78.291 Y44.419 
+G1 X78.521 Y44.494 
+G1 X78.728 Y44.618 
+G1 X78.822 Y44.7 
+G1 X78.975 Y44.887 
+G1 X79.082 Y45.105 
+G1 X79.117 Y45.222 
+G1 X79.144 Y45.464 
+G1 X79.12 Y45.684 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.438 Y45.839 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.346 Y46.087 
+G1 X79.172 Y46.358 
+G1 X78.941 Y46.582 
+G1 X78.808 Y46.673 
+G1 X78.515 Y46.807 
+G1 X78.359 Y46.848 
+G1 X78.038 Y46.876 
+G1 X77.719 Y46.83 
+G1 X77.421 Y46.714 
+G1 X77.153 Y46.531 
+G1 X76.936 Y46.294 
+G1 X76.848 Y46.158 
+G1 X76.777 Y46.014 
+G1 X76.687 Y45.705 
+G1 X76.668 Y45.383 
+G1 X76.723 Y45.066 
+G1 X76.847 Y44.771 
+G1 X76.936 Y44.633 
+G1 X77.153 Y44.396 
+G1 X77.419 Y44.214 
+G1 X77.566 Y44.147 
+G1 X77.877 Y44.065 
+G1 X78.197 Y44.056 
+G1 X78.359 Y44.079 
+G1 X78.665 Y44.179 
+G1 X78.939 Y44.344 
+G1 X79.063 Y44.451 
+G1 X79.267 Y44.7 
+G1 X79.409 Y44.989 
+G1 X79.455 Y45.144 
+G1 X79.491 Y45.464 
+G1 X79.455 Y45.782 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.79 Y45.943 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G1 X79.676 Y46.249 
+G1 X79.456 Y46.59 
+G1 X79.165 Y46.873 
+G1 X78.998 Y46.988 
+G1 X78.628 Y47.156 
+G1 X78.432 Y47.208 
+G1 X78.028 Y47.243 
+G1 X77.626 Y47.185 
+G1 X77.25 Y47.039 
+G1 X76.913 Y46.809 
+G1 X76.639 Y46.51 
+G1 X76.529 Y46.339 
+G1 X76.439 Y46.156 
+G1 X76.325 Y45.767 
+G1 X76.302 Y45.362 
+G1 X76.371 Y44.962 
+G1 X76.528 Y44.591 
+G1 X76.639 Y44.417 
+G1 X76.913 Y44.119 
+G1 X77.248 Y43.89 
+G1 X77.433 Y43.805 
+G1 X77.825 Y43.702 
+G1 X78.228 Y43.69 
+G1 X78.628 Y43.771 
+G1 X78.998 Y43.94 
+G1 X79.319 Y44.188 
+G1 X79.576 Y44.502 
+G1 X79.676 Y44.678 
+G1 X79.755 Y44.866 
+G1 X79.847 Y45.261 
+G1 X79.847 Y45.667 
+G1 X79.807 Y45.885 
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M400 ; wait
+M107 ; turn fan off 
+G1 X79.67 Y45.975 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+; Ending Gcode:
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M107 ; fan off
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G91 ; relative positioning
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G0 Z1.0 F1800 ; move up off the part
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G90 ; global positioning
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+G0 X0 Y110 F1000 ; prepare for part removal 
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M107 ; make sure fan is off
+M400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait
+M84 ; disable motorsM400 ; wait
+M106 ; turn fan on 
+G4 P0.000000 ; re-init flow, ms
+M400 ;wait

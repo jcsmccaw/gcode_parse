@@ -9,8 +9,19 @@ FINAL 0 Degree Samples:
 0.3mm layer height
 4000 mm/min feedrate
 80psi backpresssure
-
+"T5_300um_parsed.gcode"
 
 90 Degree Samples:
 
+268 Vpp
+0 Z offset
+0.3mm layer height
+4000 mm/min feedrate
+80 psi backpressure
 
+First two : 28.4 kHz
+Third: 28.2 kHz
+"T5_300um_90deg_revised_parsed.gcode"
+
+
+All Cylinders parsed with "tornado" profile. All wedges sliced with "tornadoDogbones90deg" but with modified layer height.

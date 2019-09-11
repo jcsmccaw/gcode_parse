@@ -1,0 +1,101 @@
+2/25/2019
+
+First working print. Printed a circle, forgot to tape down slide so it looked like shit but it worked. This confirmed that the early-initialization method in the GCode parser works, did it for 1 sec init. 1 sec cooling, but 1 sec init was too long. 
+
+NOTE: had to change the number of cycles output by the function generator to 100 -- this makes physical sense, since the trigger only samples at 1ms. at 28.2kHz, that's 35.5us per period. This resulted in a sub-sampled driving of the transducer, creating a frequency in the audible range (around 5.6kHz measured on the o-scope). 
+
+2/26/2019
+Taped down slides today. The nozzle diameter in the slicer was set to 0.4mm, and was a bit small. I edited the fixed commands in Slic3r for 'tornado' to a diameter of 0.6mm, and adjusted the first layer speed to 100% the regular speed (80mm/s).
+############################
+Print 2
+
+Tested a new cylinder sliced to 0.6mm nozzle dia, 500ms re-init, 1000ms pause. The trace placement was slightly better, still slight pooling during init so probably reduce that. Also, I realized changing the speed settings in the slicer does nothing since I reset the feedrate during parsing. This will need to become a new input. 
+
+Layer height looks a little tight too.
+###########################
+Print 3
+New clay that flows a little more slowly than the last, so I'll try a shorter parse length:
+Settings:
+0.8mm nozzle dia
+500ms re-init
+2000ms pause
+0.3mm layer height
+2mm parse length
+
+RESULTS
+---------
+Tss measured during first layer: 44degC
+nozzle placement is better. Triggering still has observed gaps, though this is due to the sampling rate of the trigger in in the function generatior. First brim loop was trash, with little dot patterns and very low flow. On the second loop of the brim, flow picked up and by the third there was puddling at onset. Pressure system has developed a whistle, but holding at 90psi. We need to add a fan to help improve print speed. 
+Tss measured at z = 2.4mm: 44.5degC
+
+##########################
+Print 4
+Same clay as print 3.
+
+Settings:
+0.8mm nozzle dia
+300ms re-init
+2000ms pause
+0.3mm layer height
+2mm parse length
+
+When heated up fully, these settings looked really good. When not properly heated, it under-extruded like when warming it up. This is pretty good motivation to move toward closed-loop temperature control. A photo of the print has been added to the git repo. 
+
+##########################
+Print 5
+Same clay as 3 and 4; this was trying to raise the Tss of the nozzle, but a void opened in the clay and extrusion stopped. A photo of the voids is in the repo. 
+Settings:
+0.8mm nozzle dia
+400ms re-init
+2000ms pause
+0.3mm layer height
+2mm parse length
+
+###########################
+print 6
+new clay, exact same cylinder and settings as print 3. this was to get a time-lapse of the printing process; unfortunately, the camera sucked so there's a shitty video here in the repo that's as good as that camera can focus. 
+Settings:
+0.8mm nozzle dia
+500ms re-init
+2000ms pause
+0.3mm layer height
+2mm parse length
+
+Last 3-4mm didn't extrude because of an air bubble. 
+
+#########################
+Print 7
+New clay, testing the theory that the more clay in the nozzle, the more back pressure is lost to the friction between the clay and the wall of the syringe. Printing the mini_dogbone_parsed.gcode, with:
+Settings:
+0.8mm nozzle dia
+500ms re-init
+2000ms pause
+0.2mm layer height
+2mm parse length
+
+RESULTS:All tests failed because of air bubbles stopping the print -- this is one of the largest issues with this method.
+
+######################################
+Prints 8-10
+I was thinking about pre-Boehm instruments and tuning bagpipe notes, and realized that all it takes is millimeters to dramatically alter audible pitch resonance points, so that should relate to microns in the near- ultrasonic range. Previously, we've been screwing the syringe as far as possible into the tip to ensure good mechanical contact, but that enters into a feedback loop -- the less it prints, the more frustrated the experimenter becomes, screwing it in tighter to try and get it to print, resulting in what's previously just been described as 'off' days for the system. There's definitely a sweet spot that is sensitive to the micron scale; one turn of a metric M2.5 thread is 450um, and I noticed changes as low as a quarter turn or about 110um. In the old nozzle, it's nearly impossible to keep the location consistent because the transducer and syringe are not fixed. 
+*** Being able to precisely adjust the nozzle height and contact relative to the transducer tip is essential.***
+Print 8 was exploring this issue, prints 9 and 10 were confirming that this was consistent over different clay and syringe (9) and over different days (10). 
+*** With the higher mass flow of hitting the 'Sweet Spot,' the tip doesn't bake. The heat removal by mass flow balances out the heat generation by the vibration. the steady state temperature for this is higher than we were previously comfortable with, around 60-65C, though it ranges down to 55C with similar (as seen by the naked eye) material deposition rates. 
+
+########################
+Prints 11-13
+We made several attempts at printing objects at this high mass flow rate to show it was viable through a process. the rate of material flow is *** STRONGLY *** related to temperature; the flow rate can be predicted fairly well by knowing the temperature of the nozzle. Maximum flow rate occurs 55-65C, though it's unclear if halting printing at 65C will bake the tip with the latent heat. Anything under 50C doesn't really work. 
+
+To generate the print files for these, we just set the parse length of the file to a high number (in the meters), set the delay to 0, letting it consistently print. However, there's still some sub-sampling issues with the trigger on the signal generator. When the system is running off the fan trigger, the gaps between the rising edge of the function generator catching the signal results in a lower than 100% PWM, effectively lowering the tip temperature which (We Think) lowers the flow rate and can be detrimental to a tip. 
+
+The flow rate is now quite high, so to compensate some of the parse parameters in Slic3r have been changed for the Tornado print settings; the nozzle diameter was set to 800um, the feedrate of the first layer was increased to the nominal feedrate, and the speed of the printer was increased in the Tornado user settings from '100%' to '300%' while the printer was running. 
+
+##############################
+Prints 14-16
+I tried going back to the pink nozzles that were originally used, and ended up melting them. This was news to me, and there's video in the drive. 
+
+#######################
+Prints 17 and 18
+To demonstrate the fast printing, I printed two Purdue Action Ps. They both had sub-par infill, which was just a result of the parsing settings from Slic3r. Overall, very successful -- they were baked and photos are on the drive. 
+
+
